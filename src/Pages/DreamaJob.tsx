@@ -12,6 +12,7 @@ const DreamJob = () => {
         <div className="text-lg text-mine-shaft-200">
           Good life begins with a Good connection. Start explore thousands of
           jobs in one Place.
+          
         </div>
         <div className="flex gap-3 mt-5">
           <TextInput
