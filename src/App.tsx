@@ -7,9 +7,10 @@ import HomePage from "./Pages/HomePage";
 import "@mantine/core/styles.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "@mantine/carousel/styles.css";
-import FindJobs from "./Pages/FindJobs";
 import Footer from "./Footer/Footer";
 import HeaderCompo from "./Header/HeaderCompo";
+import FindJobsPages from "./Pages/FindJobsPages";
+import FindTalentPages from "./Pages/FindTalentPages";
 
 // other css files are required only if
 // you are using components from the corresponding package
@@ -54,7 +55,8 @@ function App() {
       <BrowserRouter>
         <HeaderCompo />
         <Routes>
-          <Route path="/find-jobs" element={<FindJobs />} />
+          <Route path="/find-jobs" element={<FindJobsPages />} />
+          <Route path="/find-talent" element={<FindTalentPages />} />
           <Route path="*" element={<HomePage />} />
         </Routes>
         <Footer />

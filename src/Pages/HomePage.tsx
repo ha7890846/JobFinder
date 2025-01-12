@@ -1,5 +1,5 @@
 import Companies from "./Companies";
-import DreamJob from "./DreamaJob";
+import DreamJob from "./DreamJob";
 import JobCategory from "./JobCategory";
 import Subscribe from "./Subscribe";
 import Testimonials from "./Testimonials";
