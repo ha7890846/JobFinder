@@ -11,6 +11,7 @@ import Footer from "./Footer/Footer";
 import HeaderCompo from "./Header/HeaderCompo";
 import FindJobsPages from "./Pages/FindJobsPages";
 import FindTalentPages from "./Pages/FindTalentPages";
+import TalentProfilePage from "./Pages/TalentProfilePage";
 
 // other css files are required only if
 // you are using components from the corresponding package
@@ -57,6 +58,7 @@ function App() {
         <Routes>
           <Route path="/find-jobs" element={<FindJobsPages />} />
           <Route path="/find-talent" element={<FindTalentPages />} />
+          <Route path="/talent-profile" element={<TalentProfilePage />} />
           <Route path="*" element={<HomePage />} />
         </Routes>
         <Footer />
