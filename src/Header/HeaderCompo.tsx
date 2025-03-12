@@ -1,14 +1,17 @@
 import { Avatar, Indicator } from "@mantine/core";
 import { IconBell, IconBrandCtemplar, IconSettings } from "@tabler/icons-react";
 import NavLinks from "./NavLinks";
+import { Link } from "react-router-dom";
 
 const HeaderCompo = () => {
   return (
     <div className="w-full bg-mine-shaft-950 text-white h-28 flex justify-between px-6 items-center">
-      <div className="flex gap-2 items-center text-bright-sun-400">
-        <IconBrandCtemplar className="h-10 w-10 stroke={3}" />
-        <div className="text-3xl font-semibold">Jobber</div>
-      </div>
+      <Link to="/">
+        <div className="flex gap-2 items-center text-bright-sun-400">
+          <IconBrandCtemplar className="h-10 w-10 stroke={3}" />
+          <div className="text-3xl font-semibold">Jobber</div>
+        </div>
+      </Link>
       {NavLinks()}
       {/* Profile Section */}
       <div className="flex gap-5">
