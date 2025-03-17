@@ -8,7 +8,7 @@ const TalentCard=(props:any)=>{
             <div className="flex justify-between">
                 <div className="flex gap-2 items-center">
                     <div className="p-2 bg-mine-shaft-800 rounded-full">
-                        <Avatar size="lg" src={`/{props.image}.png`} alt="Talent Profile" />
+                        <Avatar size="lg" src={`/${props.image}.png`} alt="Talent Profile" />
                     </div>
                     <div className="flex flex-col gap-1">
                         <div className="font-semibold text-lg">{props.name}</div>
@@ -39,10 +39,10 @@ const TalentCard=(props:any)=>{
             <Divider  size="xs" color="mine-shaft.7"/>
             <div className="flex [&>*]:w-1/2 [&>*]:p-1">
                 <Link to={"/talent-profile"}>
-                    <Button color="bright-sun.5" variant="light" fullWidth>Profile</Button>
+                    <Button color="brightSun.5" variant="light" fullWidth>Profile</Button>
                 </Link>
                 <div>
-                    <Button color="bright-sun.5" variant="light" fullWidth>Message</Button>
+                    <Button color="brightsun.5" variant="light" fullWidth>Message</Button>
                 </div>
             </div>
         </div>

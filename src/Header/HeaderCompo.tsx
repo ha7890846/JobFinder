@@ -17,7 +17,7 @@ const HeaderCompo = () => {
       <div className="flex gap-5">
         <div className="flex gap-3">
           <div>Name</div>
-          <Avatar src="avatar.png" alt="Profile Pic" />
+          <Avatar src="/avatar.png" alt="Profile Pic" />
         </div>
 
         <div className="flex gap-3 bg-mine-shaft-900 p-1.5 rounded-full">

@@ -4,7 +4,7 @@ import TalentCard from "./TalentCard";
 
 const Talents = () => {
   return (
-    <div className="p-4">
+    <div className="px-5 py-5">
       <div className="flex justify-between">
         <div className="text-2xl font-semibold">Talents: </div>
         <Sort />
