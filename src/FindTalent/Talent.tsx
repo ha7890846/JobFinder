@@ -9,7 +9,7 @@ const Talents = () => {
         <div className="text-2xl font-semibold">Talents: </div>
         <Sort />
       </div>
-      <div className="m-10 flex flex-wrap gap-10 justify-between">
+      <div className="m-5 flex flex-wrap gap-10 justify-around">
         {
           talents.map((talent,index)=> <TalentCard key={index} {...talent}/>
           )

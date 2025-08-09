@@ -22,7 +22,7 @@ const SearchBar = () => {
       </div>
         <RangeSlider
           size="xs"
-          color="bright-sun.4"
+          color="brightSun.4"
           value={value}
           labelTransitionProps={{
             transition: 'skew-down',

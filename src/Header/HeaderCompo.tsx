@@ -26,7 +26,7 @@ const HeaderCompo = () => {
 
         <div className="flex gap-3 bg-mine-shaft-900 p-1.5 rounded-full">
           <Indicator
-            color="bright-sun.4"
+            color="brightSun.4"
             offset={6}
             radius="md"
             size={8}
