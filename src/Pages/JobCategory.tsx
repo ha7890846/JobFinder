@@ -12,7 +12,7 @@ const JobCategory = () => {
         Explore diverse job opportunities tailored to your skills. Start your
         Career journey Today!
       </div>
-      <Carousel slideSize="22%" slideGap="md" loop className="focus-visible:[&_button]:!outline-none
+      <Carousel slideSize="22%" slideGap="md" emblaOptions={{ loop: true }} className="focus-visible:[&_button]:!outline-none
        [&_button]:!bg-bright-sun-400 [&_button]:hover:opacity-75 [&_button]:opacity-0 hover:[&_button]:opacity-100"
       nextControlIcon={<IconArrowRight className="h-8 w-8"/>}
       previousControlIcon={<IconArrowLeft className="h-8 w-8"/>}
