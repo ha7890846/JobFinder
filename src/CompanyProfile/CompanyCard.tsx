@@ -14,7 +14,7 @@ const CompanyCard = (props:any) => {
                     </div>
                 </div>
                 <ActionIcon color="brightSun.4" variant="subtle" aria-label="Settings">
-                    <IconExternalLink style={{width:'70%', height:'70%'}} stroke={1.5}/>
+                    <IconExternalLink stroke={1.5}/>
                 </ActionIcon>
             </div>
     )
