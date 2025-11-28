@@ -1,5 +1,5 @@
-import { Avatar, Button, Divider, Tabs } from "@mantine/core";
-import { IconBriefcase, IconMapPin } from "@tabler/icons-react";
+import { Avatar, Divider, Tabs } from "@mantine/core";
+import { IconMapPin } from "@tabler/icons-react";
 import AboutComp from "./AboutComp";
 import JobComp from "./JobComp";
 import CompanyEmp from "./CompanyEmp";
@@ -15,7 +15,7 @@ const Company = () => {
           alt="profile-background"
         />
         <img
-          className="rounded-3xl w-36 h-436 -bottom-1/4 absolute left-5 bg-mine-shaft-950 border-8 p-2 border-mine-shaft-950 border-8"
+          className="rounded-3xl w-36 h-436 -bottom-1/4 absolute left-5 bg-mine-shaft-950 border-8 p-2 border-mine-shaft-950"
           src="/Icons/Google.png"
           alt="profile-pic"
         />
