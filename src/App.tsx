@@ -13,6 +13,10 @@ import PostJobPage from "./Pages/PostJobPage";
 import JobDescPage from "./Pages/JobDescPage";
 import ApplyJobPage from "./Pages/ApplyJobPage";
 import CompanyPage from "./Pages/CompanyPage";
+import PostedJobPage from "./Pages/PostedJobPage";
+import '@mantine/core/styles.css';
+import '@mantine/dates/styles.css';
+import JobHistoryPage from "./Pages/JobHistoryPage";
 function App() {
   const theme = createTheme({
     focusRing: "never",
@@ -58,7 +62,9 @@ function App() {
             <Route path="*" element={<HomePage />} />
             <Route path="/find-jobs" element={<FindJobsPages />} />
             <Route path="/find-talent" element={<FindTalentPages />} />
-            <Route path="company" element={<CompanyPage/>}/>
+            <Route path="/company" element={<CompanyPage/>}/>
+            <Route path="/posted-job" element={<PostedJobPage/>}/>
+            <Route path="/job-history" element={<JobHistoryPage/>}/>
             <Route path="/jobs" element={<JobDescPage />} />
             <Route path="/apply-job" element={<ApplyJobPage />} />
             <Route path="/talent-profile" element={<TalentProfilePage />} />
