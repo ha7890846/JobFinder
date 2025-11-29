@@ -24,7 +24,7 @@ const JobCard=(props:any)=>{
             </div>
             <Text className="!text-xs text-justify !text-mine-shaft-300" lineClamp={3}>{props.description}
             </Text>
-            <Divider  size="xs" color="mine-shaft.7"/>
+            <Divider  size="xs" color="mineShaft.7"/>
             <div className="flex justify-between">
                 <div className="font-semibold text-mine-shaft-200">
                     &#8377; {props.package}

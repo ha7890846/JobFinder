@@ -39,12 +39,12 @@ const Company = () => {
         <Tabs variant="outline" radius="lg" defaultValue="about">
           <Tabs.List className="[&_button]:!text-lg font-semibold mb-5 [&_button[data-active='true']]:text-bright-sun-400">
             <Tabs.Tab value="about">About</Tabs.Tab>
-            <Tabs.Tab value="second">Jobs</Tabs.Tab>
+            <Tabs.Tab value="jobs">Jobs</Tabs.Tab>
             <Tabs.Tab value="employee">Employees</Tabs.Tab>
           </Tabs.List>
 
           <Tabs.Panel value="about"><AboutComp/></Tabs.Panel>
-          <Tabs.Panel value="second"><JobComp/></Tabs.Panel>
+          <Tabs.Panel value="jobs"><JobComp/></Tabs.Panel>
           <Tabs.Panel value="employee"><CompanyEmp/></Tabs.Panel>
         </Tabs>
       </div>
