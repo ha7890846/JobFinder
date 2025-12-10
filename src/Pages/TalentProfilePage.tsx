@@ -1,7 +1,7 @@
 import { Button } from "@mantine/core";
 import { IconArrowLeft } from "@tabler/icons-react";
 import { Link } from "react-router-dom";
-import Profile from "../TalentProfile/Profile";
+import Profile from "../TalentProfile/TalentProfile";
 import { profile } from "../Data/TalentData";
 import RecommendTalent from "../TalentProfile/RecommendTalent";
 

@@ -7,6 +7,7 @@ const NavLinks = () => {
     { name: "Post Jobs", url: "post-job" },
     { name: "Posted Job", url: "posted-job"},
     { name: "Job History", url: "job-history"},
+    { name: "sign up", url: "signup"},
   ];
   const location = useLocation();
   return (
@@ -18,7 +19,7 @@ const NavLinks = () => {
               ? "border-bright-sun-400 text-bright-sun-400"
               : "border-transparent "
           }
-                border-t-[3px] h-full flex items-center `}
+             hover:text-bright-sun-500 hover:border-bright-sun-500  border-t-[3px] h-full flex items-center `}
         >
           <Link key={index} to={link.url}>
             {link.name}
