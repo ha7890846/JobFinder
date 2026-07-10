@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Combobox, useCombobox, Text, Box, ActionIcon } from '@mantine/core';
+import { Combobox, useCombobox, ActionIcon } from '@mantine/core';
 import { IconAdjustments } from '@tabler/icons-react';
 import { useDispatch } from 'react-redux';
 import { updateSort } from '../../Slices/SortSlice';
@@ -14,7 +14,7 @@ const Sort=(props:any)=> {
     onDropdownClose: () => combobox.resetSelectedOption(),
   });
 
-  const options = props.sort=="job"?opt.map((item) => (
+  const options = props.sort==="job"?opt.map((item) => (
     <Combobox.Option className='!text-xs' value={item} key={item}>
       {item}
     </Combobox.Option>

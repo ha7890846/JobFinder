@@ -3,7 +3,7 @@ import { useState } from "react";
 import { useSelector } from "react-redux";
 import CertiInput from "./CertiInput";
 import CertiCard from "./CertiCard";
-import { IconDeviceFloppy, IconPencil, IconPlus, IconX } from "@tabler/icons-react";
+import {  IconPencil, IconPlus, IconX } from "@tabler/icons-react";
 import { useMediaQuery } from "@mantine/hooks";
 
 const Certification = () => {

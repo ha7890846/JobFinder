@@ -1,4 +1,4 @@
-import { Anchor, Avatar, Button, Divider, Modal, Text } from "@mantine/core";
+import {  Avatar, Button, Divider, Modal, Text } from "@mantine/core";
 import { DateInput, TimeInput } from "@mantine/dates";
 import { useDisclosure } from "@mantine/hooks";
 import { IconCalendarMonth, IconHeart, IconMapPin } from "@tabler/icons-react";
@@ -19,15 +19,15 @@ const TalentCard = (props: any) => {
     const [profile, setProfile] = useState<any>(null);
     const handleOffer = (status:string) => {
         let interview:any={id, applicantId:profile?.id, applicationStatus:status};
-        if(status=="INTERVIEWING"){
+        if(status==="INTERVIEWING"){
             const [hours, minutes] = time.split(':').map(Number);
             date?.setHours(hours);
             date?.setMinutes(minutes);
             interview={...interview, interviewTime:date}
         }
         changeAppStatus(interview).then((res) => {
-            if(status=="INTERVIEWING")successNotification('Interview Scheduled',  'Interview has been scheduled successfully');
-            else if(status=="OFFERED")successNotification('Offered',  'Offer has been sent successfully');
+            if(status==="INTERVIEWING")successNotification('Interview Scheduled',  'Interview has been scheduled successfully');
+            else if(status==="OFFERED")successNotification('Offered',  'Offer has been sent successfully');
             else successNotification('Rejected',  'Offer has been rejected');
             window.location.reload();
         }).catch((err) => {

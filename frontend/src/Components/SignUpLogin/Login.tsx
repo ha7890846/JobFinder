@@ -1,5 +1,5 @@
-import { Anchor, Button, Checkbox, LoadingOverlay, PasswordInput, TextInput } from "@mantine/core";
-import { IconAt, IconCheck, IconLock, IconX } from "@tabler/icons-react";
+import { Button, LoadingOverlay, PasswordInput, TextInput } from "@mantine/core";
+import { IconAt,  IconLock } from "@tabler/icons-react";
 import { useState } from "react";
 import {  useNavigate } from "react-router-dom";
 import { loginValidation } from "../../Services/FormValidation";

@@ -1,4 +1,4 @@
-import { Badge, Divider, Tabs } from "@mantine/core";
+import { Badge, Tabs } from "@mantine/core";
 import Job from "../JobDesc/Job";
 import TalentCard from "../FindTalent/TalentCard";
 import { useEffect, useState } from "react";
@@ -8,10 +8,10 @@ const PostedJobDesc = (props:any) => {
     const [arr, setArr]=useState<any>([]);
     const handleTab=(value:any)=>{
         setTab(value);
-        if(value=="applicants")setArr(props.applicants?.filter((x:any)=>x.applicationStatus=="APPLIED"));
-        else if(value=="invited")setArr(props.applicants?.filter((x:any)=>x.applicationStatus=="INTERVIEWING"));
-        else if(value=="offered")setArr(props.applicants?.filter((x:any)=>x.applicationStatus=="OFFERED"));
-        else if(value=="rejected")setArr(props.applicants?.filter((x:any)=>x.applicationStatus=="REJECTED"));
+        if(value==="applicants")setArr(props.applicants?.filter((x:any)=>x.applicationStatus==="APPLIED"));
+        else if(value==="invited")setArr(props.applicants?.filter((x:any)=>x.applicationStatus==="INTERVIEWING"));
+        else if(value==="offered")setArr(props.applicants?.filter((x:any)=>x.applicationStatus==="OFFERED"));
+        else if(value==="rejected")setArr(props.applicants?.filter((x:any)=>x.applicationStatus==="REJECTED"));
     }
     useEffect(()=>{
         handleTab("overview");
@@ -28,7 +28,7 @@ const PostedJobDesc = (props:any) => {
                     <Tabs.Tab value="offered">Offered</Tabs.Tab>
                     <Tabs.Tab value="rejected">Rejected</Tabs.Tab>
                 </Tabs.List>
-                <Tabs.Panel value="overview" className="[&>div]:w-full">{props.jobStatus=="CLOSED"?<Job {...props} edit={true} closed />:<Job {...props} edit={true}  />}</Tabs.Panel>
+                <Tabs.Panel value="overview" className="[&>div]:w-full">{props.jobStatus==="CLOSED"?<Job {...props} edit={true} closed />:<Job {...props} edit={true}  />}</Tabs.Panel>
                 <Tabs.Panel value="applicants"><div className="flex mt-10 flex-wrap gap-5 justify-around">
                     {arr?.length?arr.map((talent:any, index:any) =>  <TalentCard key={index} {...talent} posted={true}/>):"No Applicants Yet"
                     }

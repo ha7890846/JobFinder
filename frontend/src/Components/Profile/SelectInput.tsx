@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Combobox, InputBase, ScrollArea, TextInput, useCombobox } from '@mantine/core';
+import { Combobox, InputBase, ScrollArea, useCombobox } from '@mantine/core';
 
 
 const SelectInput=(props:any)=> {

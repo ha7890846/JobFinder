@@ -9,7 +9,6 @@ import { errorNotification, successNotification } from "../../Services/Notificat
 import { useNavigate, useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect, useState } from "react";
-import { useMediaQuery } from "@mantine/hooks";
 import { hideOverlay, showOverlay } from "../../Slices/OverlaySlice";
 
 const PostJob = () => {
@@ -22,7 +21,7 @@ const PostJob = () => {
     // const matches = useMediaQuery('(min-width: 350px)');
     useEffect(()=>{
         window.scrollTo(0,0);
-        if(Number(id)!=0){
+        if(Number(id)!==0){
             dispatch(showOverlay());
             getJob(id).then((res)=>{
                 form.setValues(res);

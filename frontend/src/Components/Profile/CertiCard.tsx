@@ -4,11 +4,9 @@ import { formatDate } from "../../Services/Utilities";
 import { useDispatch, useSelector } from "react-redux";
 import { changeProfile } from "../../Slices/ProfileSlice";
 import { successNotification } from "../../Services/NotificationService";
-import { useState } from "react";
 import { useMediaQuery } from "@mantine/hooks";
 
 const CertiCard = (props: any) => {
-    const [edit, setEdit]=useState(false);
     const dispatch = useDispatch();
     const profile=useSelector((state:any)=>state.profile);
     const matches = useMediaQuery('(max-width: 475px)');

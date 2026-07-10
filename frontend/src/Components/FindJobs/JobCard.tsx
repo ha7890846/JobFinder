@@ -11,7 +11,7 @@ const JobCard = (props: any) => {
     const handleSaveJob = () => {
         let savedJobs:any=profile.savedJobs?[...profile.savedJobs]:[];
         if(savedJobs.includes(props.id)){
-            savedJobs=savedJobs.filter((job:any)=>job!=props.id);
+            savedJobs=savedJobs.filter((job:any)=>job!==props.id);
         }else{ 
             savedJobs.push(props.id);
         }

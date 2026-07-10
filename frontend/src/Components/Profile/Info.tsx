@@ -1,8 +1,8 @@
-import { IconBriefcase, IconCheck, IconDeviceFloppy, IconMapPin, IconPencil, IconX } from "@tabler/icons-react";
+import { IconBriefcase, IconCheck, IconMapPin, IconPencil, IconX } from "@tabler/icons-react";
 import SelectInput from "./SelectInput";
 import { useDispatch, useSelector } from "react-redux";
 import { useState } from "react";
-import { ActionIcon, Button, NumberInput } from "@mantine/core";
+import { ActionIcon,  NumberInput } from "@mantine/core";
 import fields from "../../Data/Profile";
 import { changeProfile } from "../../Slices/ProfileSlice";
 import { successNotification } from "../../Services/NotificationService";

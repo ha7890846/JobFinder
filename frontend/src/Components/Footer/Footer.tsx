@@ -10,7 +10,7 @@ import { Divider } from "@mantine/core";
 
 const Footer = () => {
   const location = useLocation();
-  return location.pathname != "/signup" && location.pathname != "/login" ? (
+  return location.pathname !== "/signup" && location.pathname !== "/login" ? (
     <div className="flex flex-col gap-2">
       <div className="pt-20 pb-5 bg-mine-shaft-950 p-4  flex gap-8 justify-around flex-wrap">
         <div

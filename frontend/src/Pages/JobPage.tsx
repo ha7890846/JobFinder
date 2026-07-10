@@ -18,7 +18,7 @@ const JobPage = () => {
         dispatch(showOverlay());
         getJob(id).then((res)=>{
             setJob(res);
-            if(res.jobStatus=="CLOSED")navigate(-1);
+            if(res.jobStatus==="CLOSED")navigate(-1);
         }).catch((err)=>console.log(err))
         .finally(()=>dispatch(hideOverlay()));
     },[id])

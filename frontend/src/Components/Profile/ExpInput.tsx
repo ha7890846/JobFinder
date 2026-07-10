@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect} from "react";
 import SelectInput from "./SelectInput";
 import fields from "../../Data/Profile";
 import { MonthPickerInput } from "@mantine/dates";

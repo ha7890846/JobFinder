@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { changeProfile } from "../../Slices/ProfileSlice";
 import { ActionIcon, TagsInput } from "@mantine/core";
-import { IconCheck, IconDeviceFloppy, IconPencil, IconX } from "@tabler/icons-react";
+import { IconCheck,  IconPencil, IconX } from "@tabler/icons-react";
 import { successNotification } from "../../Services/NotificationService";
 import { useMediaQuery } from "@mantine/hooks";
 

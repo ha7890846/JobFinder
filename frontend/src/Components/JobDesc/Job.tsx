@@ -19,7 +19,7 @@ const Job = (props:any) => {
     const handleSaveJob = () => {
         let savedJobs:any=profile.savedJobs?[...profile.savedJobs]:[];
         if(savedJobs.includes(props.id)){
-            savedJobs=savedJobs.filter((job:any)=>job!=props.id);
+            savedJobs=savedJobs.filter((job:any)=>job!==props.id);
         }else{ 
             savedJobs.push(props.id);
         }
@@ -28,7 +28,7 @@ const Job = (props:any) => {
     }
     const [applied, setApplied] = useState(false);
     useEffect(()=>{
-        if(props.applicants?.filter((applicant:any)=>applicant.applicantId==user.id).length>0){
+        if(props.applicants?.filter((applicant:any)=>applicant.applicantId===user.id).length>0){
             setApplied(true);
         }
         else setApplied(false);
@@ -68,7 +68,7 @@ const Job = (props:any) => {
                 card.map((item, index) => <div key={index} className="flex flex-col text-sm gap-1 items-center ">
                     <ActionIcon className="!h-12 !w-12 xs-mx:!h-8 xs-mx:!w-8" variant="light" color="brightSun.4" radius="xl" ><item.icon className="h-4/5 w-4/5" /></ActionIcon>
                     <div className="text-mine-shaft-300 xs-mx:text-sm">{item.name}</div>
-                    <div className="text-base font-semibold xs-mx:text-sm">{props ? props[item.id]:"NA"}{item.id=="packageOffered"&& <> LPA</>}</div>
+                    <div className="text-base font-semibold xs-mx:text-sm">{props ? props[item.id]:"NA"}{item.id==="packageOffered"&& <> LPA</>}</div>
                 </div>)}
         </div>
         <Divider size="xs" my="xl" />

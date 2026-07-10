@@ -5,7 +5,7 @@ import { searchFields } from "../../Data/TalentData";
 import { IconUserCircle } from "@tabler/icons-react";
 import { updateFilter } from "../../Slices/FilterSlice";
 import { useDispatch } from "react-redux";
-import { useDebouncedState, useDisclosure, useMediaQuery } from "@mantine/hooks";
+import {  useDisclosure, useMediaQuery } from "@mantine/hooks";
 
 const SearchBar = () => {
     const dispatch = useDispatch();
@@ -14,7 +14,7 @@ const SearchBar = () => {
     const [value, setValue] = useState<[number, number]>([0, 50]);
     const [name, setName] =  useState('');;
     const handleChange = (name:any, event:any) => {
-        if(name=="exp"){
+        if(name==="exp"){
             dispatch(updateFilter({exp:event}));
         }
         else{

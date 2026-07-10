@@ -20,7 +20,7 @@ const SignUp = () => {
     const [loading, setLoading] = useState(false);
     const navigate=useNavigate();
     const handleChange = (event: any) => {
-        if (typeof (event) == "string") {
+        if (typeof (event) === "string") {
             setData({ ...data, accountType: event });
             return;
         }

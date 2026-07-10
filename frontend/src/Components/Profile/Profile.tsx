@@ -1,11 +1,9 @@
-import { ActionIcon, Avatar, Button, Checkbox, Divider, FileInput, Indicator, Overlay, Pill, TagsInput, Textarea } from "@mantine/core";
+import { Avatar, Divider, FileInput, Overlay} from "@mantine/core";
 
-import { useEffect, useState } from "react";
 
 import { useDispatch, useSelector } from "react-redux";
-import { getProfile } from "../../Services/ProfileService";
 import Info from "./Info";
-import { changeProfile, setProfile } from "../../Slices/ProfileSlice";
+import { changeProfile} from "../../Slices/ProfileSlice";
 import About from "./About";
 import Skills from "./Skills";
 import Experience from "./Experience";

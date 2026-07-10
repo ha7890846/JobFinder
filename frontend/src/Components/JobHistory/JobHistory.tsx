@@ -1,7 +1,7 @@
-import { Divider, Tabs } from "@mantine/core";
+import { Tabs } from "@mantine/core";
 import Card from "./Card";
 import { useEffect, useState } from "react";
-import { getAllJobs, getHistory } from "../../Services/JobService";
+import { getAllJobs} from "../../Services/JobService";
 import { useDispatch, useSelector } from "react-redux";
 import { hideOverlay, showOverlay } from "../../Slices/OverlaySlice";
 
@@ -20,7 +20,7 @@ const JobHistory = () => {
             setShowList(res.filter((job:any)=>{
                 let found=false;
                 job.applicants?.forEach((applicant:any)=>{
-                    if(applicant.applicantId==user.id && applicant.applicationStatus=="APPLIED")found=true;
+                    if(applicant.applicantId===user.id && applicant.applicationStatus==="APPLIED")found=true;
                 }) 
                 return found;
             }));
@@ -28,13 +28,13 @@ const JobHistory = () => {
         .finally(()=>dispatch(hideOverlay()));
     }, [])
     const handleTabChange = (value: string | null) => {
-        if(value=="SAVED"){
+        if(value==="SAVED"){
 setShowList(jobList.filter((job:any)=>profile?.savedJobs?.includes(job.id)));
         }else {
             setShowList(jobList.filter((job:any)=>{
                 let found=false;
                 job.applicants?.forEach((applicant:any)=>{
-                    if(applicant.applicantId==user.id && applicant.applicationStatus==value)found=true;
+                    if(applicant.applicantId===user.id && applicant.applicationStatus===value)found=true;
                 }) 
                 return found;
             }));

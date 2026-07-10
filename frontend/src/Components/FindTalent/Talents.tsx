@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import { talents } from "../../Data/TalentData";
 import Sort from "../FindJobs/Sort";
 import TalentCard from "./TalentCard";
 import { getAllProfiles } from "../../Services/ProfileService";
@@ -22,10 +21,10 @@ const Talents=()=>{
         .finally(()=>dispatch(hideOverlay()))
     },[])
     useEffect(()=>{
-        if(sort=="Experience: Low to High"){
+        if(sort==="Experience: Low to High"){
             setTalents([...talents].sort((a: any, b: any) => a.totalExp - b.totalExp));
         }
-        else if(sort=="Experience: High to Low"){
+        else if(sort==="Experience: High to Low"){
             setTalents([...talents].sort((a: any, b: any) => b.totalExp - a.totalExp));
         }
 

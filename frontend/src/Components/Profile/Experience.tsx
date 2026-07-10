@@ -1,5 +1,5 @@
 import { ActionIcon } from "@mantine/core";
-import { IconDeviceFloppy, IconPencil, IconPlus, IconX } from "@tabler/icons-react";
+import { IconPencil, IconPlus, IconX } from "@tabler/icons-react";
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import ExpInput from "./ExpInput";
@@ -7,7 +7,6 @@ import ExpCard from "./ExpCard";
 import { useMediaQuery } from "@mantine/hooks";
 
 const Experience=()=>{
-    const dispatch = useDispatch();
     const matches = useMediaQuery('(max-width: 475px)');
     const profile=useSelector((state:any)=>state.profile);
     const [edit, setEdit] = useState(false);

@@ -3,7 +3,6 @@ import { IconBookmark, IconBookmarkFilled, IconCalendarMonth, IconClockHour3 } f
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { timeAgo } from "../../Services/Utilities";
-import { useEffect } from "react";
 import { changeProfile } from "../../Slices/ProfileSlice";
 
 const Card = (props: any) => {
@@ -12,7 +11,7 @@ const Card = (props: any) => {
     const handleSaveJob = () => {
         let savedJobs:any=[...profile.savedJobs];
         if(savedJobs.includes(props.id)){
-            savedJobs=savedJobs.filter((job:any)=>job!=props.id);
+            savedJobs=savedJobs.filter((job:any)=>job!==props.id);
         }else{ 
             savedJobs.push(props.id);
         }

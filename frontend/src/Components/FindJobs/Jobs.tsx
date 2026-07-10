@@ -22,21 +22,21 @@ const Jobs = () => {
         dispatch(resetSort());
         dispatch(showOverlay())
         getAllJobs().then((res)=>{
-            setJobList(res.filter((job:any)=>job.jobStatus=="ACTIVE"));
+            setJobList(res.filter((job:any)=>job.jobStatus==="ACTIVE"));
         }).catch((err)=>console.log(err))
         .finally(()=>dispatch(hideOverlay()));
         return ()=>{
             if(!filter.page)dispatch(resetFilter());
           }
-    }, [])
+    },[])
     useEffect(()=>{
-        if(sort=="Most Recent"){
+        if(sort==="Most Recent"){
             setJobList([...jobList].sort((a: any, b: any) => new Date(b.postTime).getTime() - new Date(a.postTime).getTime()));
         }
-        else if(sort=="Salary: Low to High"){
+        else if(sort==="Salary: Low to High"){
             setJobList([...jobList].sort((a: any, b: any) => a.packageOffered - b.packageOffered));
         }
-        else if(sort=="Salary: High to Low"){
+        else if(sort==="Salary: High to Low"){
             setJobList([...jobList].sort((a: any, b: any) => b.packageOffered - a.packageOffered));
         }
 

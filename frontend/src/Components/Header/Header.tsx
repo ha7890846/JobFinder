@@ -1,5 +1,5 @@
-import { Avatar, Burger, Button, Drawer, Indicator } from "@mantine/core";
-import { IconAnchor, IconAsset, IconBell, IconSettings, IconX } from "@tabler/icons-react";
+import {  Burger, Button, Drawer } from "@mantine/core";
+import { IconAnchor, IconX } from "@tabler/icons-react";
 import NavLinks from "./NavLinks";
 import ProfileMenu from "./ProfileMenu";
 import { Link, useLocation, useNavigate } from "react-router-dom";
@@ -11,8 +11,7 @@ import NotiMenu from "./NotiMenu";
 import { jwtDecode } from "jwt-decode";
 import { setUser } from "../../Slices/UserSlice";
 import { setupResponseInterceptor } from "../../Interceptor/AxiosInterceptor";
-import { useDisclosure, useMediaQuery } from "@mantine/hooks";
-import { hideOverlay, showOverlay } from "../../Slices/OverlaySlice";
+import { useDisclosure } from "@mantine/hooks";
 
 const links = [
     { name: "Find Jobs", url: "find-jobs" },
@@ -52,7 +51,7 @@ const Header = () => {
             // .finally(()=>dispatch(hideOverlay()));
         }
     }, [token, navigate]);
-    return (location.pathname != "/signup" && location.pathname != "/login") ? <div data-aos="zoom-out" className="w-full bg-mine-shaft-950 px-6 text-white h-20 flex justify-between items-center font-['poppins']">
+    return (location.pathname !== "/signup" && location.pathname !== "/login") ? <div data-aos="zoom-out" className="w-full bg-mine-shaft-950 px-6 text-white h-20 flex justify-between items-center font-['poppins']">
         <div onClick={() => navigate("/")} className="flex gap-1 cursor-pointer items-center text-bright-sun-400">
             <IconAnchor className="h-8 w-8" stroke={2.5} />
             <div className=" xs-mx:hidden text-3xl font-semibold">JobHook</div>

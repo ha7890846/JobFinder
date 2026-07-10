@@ -1,6 +1,4 @@
 
-import Footer from "../Components/Footer/Footer";
-import Header from "../Components/Header/Header";
 import Companies from "../Components/LandingPage/Companies";
 import DreamJob from "../Components/LandingPage/DreamJob";
 import JobCategory from "../Components/LandingPage/JobCategory";

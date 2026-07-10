@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 import SelectInput from "./SelectInput";
 import fields from "../../Data/Profile";
 import { MonthPickerInput } from "@mantine/dates";
@@ -7,12 +6,9 @@ import { isNotEmpty, useForm } from "@mantine/form";
 import { useDispatch, useSelector } from "react-redux";
 import { successNotification } from "../../Services/NotificationService";
 import { changeProfile } from "../../Slices/ProfileSlice";
-import { useMediaQuery } from "@mantine/hooks";
 
 const CertiInput = (props: any) => {
     const select = fields;
-    const matches = useMediaQuery('(max-width: 475px)');
-
     const dispatch = useDispatch();
     const profile = useSelector((state: any) => state.profile);
     const form = useForm({

@@ -2,7 +2,6 @@ import { Avatar, Button, Divider, Pill } from "@mantine/core";
 import { IconBriefcase, IconMapPin } from "@tabler/icons-react";
 import ExpCard from "./ExpCard";
 import CertiCard from "./CertiCard";
-import { profile } from "../../Data/TalentData";
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { getProfile } from "../../Services/ProfileService";
